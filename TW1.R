@@ -39,7 +39,6 @@ train <- housing[to_train, ]
 test <- housing[to_test, ]
 
 first_lm <- lm( medv ~ crim +rm +tax +lstat, data = train)
-
 lm1_rsqu <- summary(first_lm)$r.squared
 print(paste("First linear model has an r-squared value of ", round(lm1_rsqu, 3), sep = ""))
 
@@ -58,4 +57,3 @@ results %>%
     stat_smooth() +
     labs(x = "Predicted Values", y = "Original Values", title = "Predicted vs. Original Values") +
     theme_minimal()
-
